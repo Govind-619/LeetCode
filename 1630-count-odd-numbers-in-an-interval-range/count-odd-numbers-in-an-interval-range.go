@@ -1,8 +1,6 @@
 func countOdds(low int, high int) int {
-    length := high - low +1
-
-    if length % 2 != 0 && low%2 != 0{
-        return length/2+1
+    if low%2==0&&high%2==0 {
+        return (high-low)/2
     }
-    return length/2
+    return (high-low)/2+1;
 }
