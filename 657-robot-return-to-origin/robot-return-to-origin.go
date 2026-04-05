@@ -1,5 +1,4 @@
 func judgeCircle(moves string) bool {
-    Ox,Oy:=0,0
     x,y:= 0,0
     for _,v:= range moves{
         switch v{
@@ -13,5 +12,5 @@ func judgeCircle(moves string) bool {
             x--
         }
     }
-    return Ox==x && Oy==y
+    return x==0 && y==0
 }
