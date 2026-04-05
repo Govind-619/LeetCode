@@ -1,16 +1,17 @@
 func judgeCircle(moves string) bool {
-    x,y:= 0,0
-    for _,v:= range moves{
-        switch v{
-            case 'R':
-            y++
-            case 'L':
-            y--
-            case 'U':
+    x, y := 0, 0
+
+    for _, m := range moves {
+        if m == 'R' {
             x++
-            case 'D':
+        } else if m == 'L' {
             x--
+        } else if m == 'U' {
+            y++
+        } else if m == 'D' {
+            y--
         }
     }
-    return x==0 && y==0
+
+    return x == 0 && y == 0
 }
